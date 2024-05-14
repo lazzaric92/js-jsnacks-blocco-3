@@ -9,4 +9,9 @@ if(userNumber > 20 || userNumber < 1 || Number.isNaN(userNumber)) {
 for(let i = 0; i < userNumber; i++){
     numbersArray.push(Math.floor(Math.random() * 100) + 1);
 }
-console.log(numbersArray);
+
+if(numbersArray.length >= 5){
+    console.log(numbersArray, numbersArray.slice(-5));
+} else {
+    console.log(numbersArray);
+}
