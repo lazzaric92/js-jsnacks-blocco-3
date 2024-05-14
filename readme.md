@@ -21,8 +21,9 @@ Stampiamo poi gli ultimi 5 elementi dell'Array
 BONUS:
 Chiediamo all'utente quanti elementi dell'array dovremo stampare
 
-Chiedo all'utente di inserire un numero (verifico che abbia inserito un numero)
+
 Creo un array
+Chiedo all'utente di inserire un numero (verifico che abbia inserito un numero e che sia valido)
 Scrivo un ciclo for con i che va da 0 al numeroUtente
     genero dei numeri casuali da 1 a 100 e li inserisco nell'array
 Stampo gli ultimi 5 elementi
