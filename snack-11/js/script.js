@@ -4,7 +4,7 @@ const numbersArray = [];
 let sum = 0; 
 while (sum < 50){
     const userNumber = Number.parseInt(prompt('Type a number'), 10);
-    if(!Number.isNaN(userNumber)){
+    if(!Number.isNaN(userNumber) && userNumber < 50){
         numbersArray.push(userNumber);
         sum += userNumber;
     }
