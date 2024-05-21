@@ -3,7 +3,7 @@
 let userSeconds = Number.parseInt(prompt('Type the number of seconds of your timer') ,10);
 if(userSeconds < 0 || userSeconds > 30 || Number.isNaN(userSeconds)){
     userSeconds = 10;
-    console.log('Given default timer:' + userSeconds);
+    console.log('Given default timer: ' + userSeconds + 's');
 }
 
 const userTimer = setInterval(function(){
