@@ -8,5 +8,5 @@ const palla = {
     peso: 10
 }
 
-palla.peso = prompt('Type the ball weight');
+palla.peso = Number.parseFloat(prompt('Type the ball weight'), 10);
 console.log(palla);
