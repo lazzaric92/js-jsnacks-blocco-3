@@ -54,10 +54,14 @@ const zucchini = [
 ]
 
 // romanesco 15-18, tonda 20, napoletana 40-50, trombetta 20-30
-
+let sum = 0;
+zucchini.forEach(zucchina => {
+    sum += zucchina.peso;
+});
 
 const longerZucchini = zucchini.filter((zucchina) => zucchina.lunghezza > 20);
 const shorterZucchini = zucchini.filter((zucchina) => zucchina.lunghezza <= 20);
 
+console.log(sum);
 console.log(longerZucchini);
 console.log(shorterZucchini);
