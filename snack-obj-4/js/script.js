@@ -33,15 +33,47 @@ const browserWindows = [
         "activeTab": 0
     },
     {
-        "tab": ["Google", "Facebook", "Twitch", "Discord"],
+        "tab": ["Google", "Facebook", "Instagram", "Twitch", "Discord", "Youtube", "MDN"],
         "activeTab": 2
     }
 ]
 
 const socials = ["Facebook", "GitHub", "Instagram", "Twitter"]
 
-const newBrowserWindows = browserWindows.map((element) => {
-    element["tab"] = element["tab"].filter((el) => !socials.includes(el));
+
+let clonedBrowserWindows = [...browserWindows];
+console.log(clonedBrowserWindows);
+
+clonedBrowserWindows.forEach(element => {
+    (element["tab"]) = (element["tab"]).filter((tab) => {   // <-- filtro gli elementi dell'array tab
+        // ? il software deve controllare
+        // ? se tra gli elementi di tab ci sono elementi che fanno parte dell'array socials
+            // > se sì rimuoverli
+        
+        let isFound = false;
+        socials.forEach(social => {   // <-- controllo ogni elemento dell'array social
+            if(isFound === false && social.toLowerCase() === tab.toLowerCase()){    // <-- vado avanti finché non trovo un elemento dell'array socials uguale a quello dell'array tab in esame
+                isFound = true;
+                console.log(tab + ' è un social');
+                return isFound;
+            }
+        });
+        return !isFound;
+    
+        // ? quale è l'indice della tab attiva
+            // ? controllare che l'indice non sia più alto del numero di tab dopo la pulizia
+                // > se sì, portare l'indice a 0
+            // ? se l'indice era associato a un social 
+                // > se sì, attivare quello della tab successiva (considerando la pulizia)
+                // > se no, lasciarlo associato alla tab che era aperta (considerando la pulizia)
+    })
+    console.log(clonedBrowserWindows);
 });
 
-console.log(browserWindows);
+
+
+
+
+
+
+
