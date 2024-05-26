@@ -41,7 +41,7 @@ const browserWindows = [
 const socials = ["Facebook", "GitHub", "Instagram", "Twitter"]
 
 
-let clonedBrowserWindows = [...browserWindows];
+let clonedBrowserWindows = JSON.parse(JSON.stringify(browserWindows));
 console.log(browserWindows);
 
 
